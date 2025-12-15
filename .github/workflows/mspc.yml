@@ -51,7 +51,6 @@ jobs:
           LP_MAPS_URL: ${{ secrets.LP_MAPS_URL }}
           LP_SLOTS_URL: ${{ secrets.LP_SLOTS_URL }}
           LP_MEMORY_URL: ${{ secrets.LP_MEMORY_URL }}
-          LP_PROFILE_URL: ${{ secrets.LP_PROFILE_URL }}
 
       - name: 🖼️ Upload error screenshots if failed
         if: failure()
