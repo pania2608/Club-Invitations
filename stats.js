@@ -5,8 +5,8 @@ module.exports = async function runStatsExtractor(page) {
   // -------------------------------
   console.log("🚀 Starting Phase 1: Profile ID Extraction (No Club)");
 
-  const startPage = 21;
-  const endPage = 100;
+  const startPage = 101;
+  const endPage = 292;
   const tierId = 10;
   let allProfiles = [];
 
