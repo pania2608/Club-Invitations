@@ -4,7 +4,7 @@ module.exports = async function runStatsExtractor(page) {
 
   // ⚙️ MANUAL CONFIGURATION - Change these values before each run
   const startPage = 1;    // ← Change this to your desired starting page
-  const endPage = 2;     // ← Change this to your desired ending page (inclusive)
+  const endPage = 1;     // ← Change this to your desired ending page (inclusive)
 
   // Example:
   // First run:  startPage = 1;   endPage = 50;
