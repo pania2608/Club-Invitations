@@ -1,4 +1,4 @@
-// recruit-ladies-full-debug.js
+// recruit-ladies-full.js
 module.exports = async function runStatsExtractor(page) {
   // -------------------------------
   // Phase 1: Lady ID Extraction
@@ -94,44 +94,27 @@ module.exports = async function runStatsExtractor(page) {
 
   const inviteMessage = `Hello dear! 🌸 We’d be happy to welcome you to our club. You are active, strong, and would be a wonderful addition to our team. ➊ 💖 Donations are completely voluntary, and we are very flexible about them. ➋ ⚔️ We encourage members to improve their skills at their own pace and to participate in club battles, which we plan to hold on a fixed day every week. ➌ 👑 We currently have a Vice President position open and are looking to recruit committed members (including you, if you’re interested) who are willing to share responsibility in decision-making for club policies and implementation. ➍ 🤝 We truly value every member’s opinion. All members have an equal say in how the club operates, and decisions are made with collective consent, regardless of level or skill. ➎ 👭 Our current goal is to build a strong club made up of strong ladies with a true sense of loyalty and belonging. We would be delighted to have you join us. Happy gaming! 🌟`;
 
-  // Make sure we are on guild page before sending invites
-  await page.goto('https://v3.g.ladypopular.com/guild.php', { waitUntil: 'domcontentloaded' });
-  await page.waitForTimeout(2000);
-
   for (let i = 0; i < allLadies.length; i++) {
     const lady = allLadies[i];
 
-    console.log(`\n📤 Sending invite ${i + 1}/${allLadies.length}`);
+    console.log(`📤 Sending invite ${i + 1}/${allLadies.length}`);
     console.log(`   👩 Name: ${lady.name}`);
     console.log(`   🆔 Lady ID: ${lady.ladyId}`);
     console.log(`   🌐 Current page: ${page.url()}`);
 
     try {
-      const res = await page.evaluate(async ({ ladyId, message }) => {
-        try {
-          const response = await fetch('/ajax/guilds.php', {
-            method: 'POST',
-            body: new URLSearchParams({
-              type: 'invite',
-              lady: ladyId,
-              message
-            }),
-            headers: {
-              'X-Requested-With': 'XMLHttpRequest'
-            },
-            credentials: 'same-origin'
-          });
-
-          const json = await response.json();
-          console.log("      🔹 Raw server response:", json);
-          return json;
-        } catch (err) {
-          console.log("      ❌ Fetch failed inside browser context:", err);
-          return { status: 0, message: err.message };
+      // Use Playwright request.post to properly use browser session
+      const response = await page.request.post('https://v3.g.ladypopular.com/ajax/guilds.php', {
+        form: {
+          type: 'invite',
+          lady: lady.ladyId,
+          message: inviteMessage
         }
-      }, { ladyId: lady.ladyId, message: inviteMessage });
+      });
 
-      console.log("   📝 Response:", res);
+      const res = await response.json();
+
+      console.log(`   📝 Response:`, res);
 
       if (res.status === 1) {
         console.log(`✅ Invite sent to ${lady.name} (${lady.ladyId})`);
