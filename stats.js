@@ -1,7 +1,7 @@
 // recruit-ladies-playwright.js
 module.exports = async function runStatsExtractor(page) {
   // -------------------------------
-  // Phase 1: Profile ID Extraction
+  // Phase 1: Im the best
   // -------------------------------
   console.log("🚀 Starting Phase 1: Profile ID Extraction (No Club)");
 
