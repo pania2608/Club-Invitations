@@ -6,8 +6,8 @@ module.exports = async function runStatsExtractor(page) {
   console.log("🚀 Starting Phase 1: Profile ID Extraction (No Club)");
 
   const startPage = 1; //change
-  const endPage = 292; //change
-  const tierId = 10; //change
+  const endPage = 88; //change
+  const tierId = 9; //change
   let allProfiles = [];
 
   await page.goto('https://v3.g.ladypopular.com', { waitUntil: 'domcontentloaded', timeout: 60000 });
