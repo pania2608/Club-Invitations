@@ -109,14 +109,7 @@ module.exports = async function runStatsExtractor(page) {
   console.log(`🚀 Starting Phase 3: Sending invites to ${allLadies.length} ladies`);
 
   // EDIT THE MESSAGE HERE
-  const inviteMessage = `Hello lovely lady,
-I’m happy to invite you to Zellbury, a newly created club that is beginning a fresh and exciting journey. This club was created to be a warm and friendly place where everyone feels welcome and comfortable.
-
-At Zellbury, our goal is to grow together, work toward higher ranks, and make the club well-known while keeping the environment positive and stress-free. We believe a club should feel like a second home, a place where you can relax, chat freely, laugh, and enjoy the game with people who respect and support one another.
-
-Every member’s voice matters here. All suggestions, ideas, and opinions are always welcome and appreciated. Whether you enjoy being competitive, casual, or simply social, there is a place for you in Zellbury. We grow as a team, help each other, and celebrate progress together.
-
-If you would like to be part of a kind, friendly, and family-like club from the very beginning and help shape its future, we would be truly happy to have you join us. Let’s start this beautiful journey together and make Zellbury something special 🤍✨;`
+  const inviteMessage = `Hello lovely lady! I’m happy to invite you to Zellbury, a new club starting a fresh and exciting journey. Zellbury is a warm, friendly place where everyone feels welcome and comfortable. Our goal is to grow together, reach higher ranks, and stay positive and stress-free. Every voice matters, members support each other, and ideas are always valued. If you’d like a kind, family like club to relax, chat, and grow from the start, we’d love to have you 🤍✨;`
 
   for (let i = 0; i < allLadies.length; i++) {
     const lady = allLadies[i];
