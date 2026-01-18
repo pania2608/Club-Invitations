@@ -116,7 +116,7 @@ At Zellbury, our goal is to grow together, work toward higher ranks, and make th
 
 Every member’s voice matters here. All suggestions, ideas, and opinions are always welcome and appreciated. Whether you enjoy being competitive, casual, or simply social, there is a place for you in Zellbury. We grow as a team, help each other, and celebrate progress together.
 
-If you would like to be part of a kind, friendly, and family-like club from the very beginning and help shape its future, we would be truly happy to have you join us. Let’s start this beautiful journey together and make Zellbury something special 🤍✨;
+If you would like to be part of a kind, friendly, and family-like club from the very beginning and help shape its future, we would be truly happy to have you join us. Let’s start this beautiful journey together and make Zellbury something special 🤍✨;`
 
   for (let i = 0; i < allLadies.length; i++) {
     const lady = allLadies[i];
