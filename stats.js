@@ -6,8 +6,8 @@ module.exports = async function runStatsExtractor(page) {
   console.log("🚀 Starting Phase 1: Profile ID Extraction (No Club)");
 
   const startPage = 1; //change
-  const endPage = 293; //change
-  const tierId = 10; //change
+  const endPage = 87; //change
+  const tierId = 9; //change
   let allProfiles = [];
 
   await page.goto('https://v3.g.ladypopular.com', { waitUntil: 'domcontentloaded', timeout: 60000 });
@@ -109,7 +109,14 @@ module.exports = async function runStatsExtractor(page) {
   console.log(`🚀 Starting Phase 3: Sending invites to ${allLadies.length} ladies`);
 
   // EDIT THE MESSAGE HERE
-  const inviteMessage = `Hi lovely! I’d really love to invite you to join our club. We’re a calm, relaxed group and don’t expect high levels of activity or constant participation. We value independence and how much you take part in club activities is completely up to you. There’s no pressure to join club fights or any other events unless you feel like it. I genuinely feel you’d be a great fit with us, and we’d be very happy to have you if you decide to join. 💖`;
+  const inviteMessage = `Hello lovely lady,
+I’m happy to invite you to Zellbury, a newly created club that is beginning a fresh and exciting journey. This club was created to be a warm and friendly place where everyone feels welcome and comfortable.
+
+At Zellbury, our goal is to grow together, work toward higher ranks, and make the club well-known while keeping the environment positive and stress-free. We believe a club should feel like a second home, a place where you can relax, chat freely, laugh, and enjoy the game with people who respect and support one another.
+
+Every member’s voice matters here. All suggestions, ideas, and opinions are always welcome and appreciated. Whether you enjoy being competitive, casual, or simply social, there is a place for you in Zellbury. We grow as a team, help each other, and celebrate progress together.
+
+If you would like to be part of a kind, friendly, and family-like club from the very beginning and help shape its future, we would be truly happy to have you join us. Let’s start this beautiful journey together and make Zellbury something special 🤍✨;
 
   for (let i = 0; i < allLadies.length; i++) {
     const lady = allLadies[i];
