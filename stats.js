@@ -108,7 +108,7 @@ module.exports = async function runStatsExtractor(page) {
 
   console.log(`🚀 Starting Phase 3: Sending invites to ${allLadies.length} ladies`);
 
-  const inviteMessage = `Hi sweetie! We’d love to have you join our club. Donations are completely voluntary, and we have plenty of club fights where you can really showcase your strength. The only requirement is that you participate most of the club fights. Hope to see you with us! ✨`;
+  const inviteMessage = `Hi sweetie! We’d love to have you join our club. Donations are completely voluntary, and we are a peaceful club. Hope to see you with us! ✨`;
 
   for (let i = 0; i < allLadies.length; i++) {
     const lady = allLadies[i];
