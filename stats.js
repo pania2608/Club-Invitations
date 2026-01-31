@@ -7,7 +7,7 @@ module.exports = async function runStatsExtractor(page) {
 
   const startPage = 1; //change
   const endPage = 90; //change
-  const tierId = 8; //change
+  const tierId = 7; //change
   let allProfiles = [];
 
   await page.goto('https://v3.g.ladypopular.com', { waitUntil: 'domcontentloaded', timeout: 60000 });
