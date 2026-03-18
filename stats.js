@@ -6,7 +6,7 @@ module.exports = async function runStatsExtractor(page) {
   console.log("🚀 Starting Phase 1: Profile ID Extraction (No Club)");
 
   const startPage = 1; //change
-  const endPage = 86; //change
+  const endPage = 85; //change
   const tierId = 9; //change
   let allProfiles = [];
 
@@ -74,7 +74,8 @@ module.exports = async function runStatsExtractor(page) {
 
   console.log(`🚀 Starting Phase 3: Sending invites to ${allLadies.length} ladies`);
 
-  const inviteMessage = `Hi! Zellbury is all about good vibes, mutual support, and growing together. If you’d like a calm, friendly club to relax and connect, we’d love to have you`;
+  const inviteMessage = `We’d like to invite you to join Zellbury Club! Right now, a club fight is going on and we really need support. If you can join us and help, it would mean a lot Even if you just want to stay for the fight, that’s completely fine and if you decide to stay longer, you’re more than welcome!
+For now, we’d really appreciate your help in winning the trophy.Thank you!`;
 
   for (let i = 0; i < allLadies.length; i++) {
     const lady = allLadies[i];
